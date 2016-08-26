@@ -14,8 +14,8 @@ public class UserRepository extends BaseRepository<User>{
 	
 	private static final String INSERT_USER = "INSERT INTO student_info (student_name,student_age,student_address) " +
 				"VALUES (?, ? ,?)";
-	private static final String UPDATE_USER = "UPDATE student_info SET student_name = ?,student_age = ?,student_address = ? WHERE USERCD = ?";
-	private static final String DELETE_USER = "delete from student_info WHERE USERCD = ?";
+	private static final String UPDATE_USER = "UPDATE student_info SET student_name = ?,student_age = ?,student_address = ? WHERE student_id = ?";
+	private static final String DELETE_USER = "delete from student_info WHERE student_id = ?";
 			
 	@Override
 	public boolean save(User record) {
